@@ -5,8 +5,6 @@
   tasks:
     - ec2:
        key_name: Test
-       aws_access_key: AKIAVXWVK2AG5AJLT2HQ
-       aws_secret_key: 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
        instance_type: t2.micro
        image: ami-007d5db58754fa284
        wait: yes
