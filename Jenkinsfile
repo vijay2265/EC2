@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
-                sh 'ansible-playbook Hello.yml'
+                sh 'ansible-playbook EC2.yml'
             }
         }
     }
