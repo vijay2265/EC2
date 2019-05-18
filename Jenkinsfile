@@ -4,11 +4,14 @@ pipeline {
         AWS_ACCESS_KEY_ID     = credentials('aws-secret-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
     }
-     stages {
+    stages {
         stage('Build') {
             steps {
-                sh 'ansible-playbook EC2.yml'
                 sh 'env'
+     stages {
+        stage('Deploy') {
+            steps {
+                sh 'ansible-playbook EC2.yml'
             }
         }
     }
