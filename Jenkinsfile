@@ -8,6 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ansible-playbook EC2.yml'
+                sh 'env'
             }
         }
     }
