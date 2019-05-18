@@ -8,6 +8,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'env'
+            }
+        }
+    }
      stages {
         stage('Deploy') {
             steps {
