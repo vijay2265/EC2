@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Test') {
+        stage('Deploy') {
             steps {
                 sh 'ansible-playbook EC2.yml'
             }
