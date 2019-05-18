@@ -6,15 +6,16 @@ pipeline {
                 sh 'ansible-playbook EC2.yml'
             }
         }
-    }
- }  
-    stage('Build') {
+    } 
+         stage('Build') {
             steps {
                 // Example AWS credentials
                 withCredentials(
                 [[
                     $class: 'AmazonWebServicesCredentialsBinding',
                     accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-                    credentialsId: 'aws-dev-credentials',  // ID of credentials in Jenkins
                     secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                 ]])
+            }               
+        }
+    }
