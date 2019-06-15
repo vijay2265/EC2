@@ -6,10 +6,5 @@ pipeline {
                 sh 'env'
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'ansible-playbook Hello.yml'
-            }
-        }
     }
-}    
+}
