@@ -4,9 +4,9 @@
   gather_facts: no
   tasks:
     - ec2:
-       key_name: Test
+       key_name: RDP
        instance_type: t2.micro
-       image: ami-007d5db58754fa284
+       image: ami-06d6867eae5b4f398
        wait: yes
        region: ap-south-1
        group: VPC_SG
