@@ -1,9 +1,16 @@
 pipeline {
     agent any
-        stage('Deploy') {
+    stages {
+        stage('Build') {
             steps {
-                sh 'ansible-playbook Hello.yml'
+                sh 'env'
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'ansible-playbook EC2.yml'
+                sh 'ansible-playbook Hello.yml'
+            }
+        } 
     }
-}      
+}    
