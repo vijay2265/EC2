@@ -13,3 +13,13 @@
        count: 1
        vpc_subnet_id: subnet-3f83aa57
        assign_public_ip: yes
+       wait: yes
+       wait_timeout: 180
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    ec2:
+       state: 'absent'
+       instance_ids: '{{ ec2.instance_ids }}' 
+       region: ap-south-1  
