@@ -16,6 +16,7 @@
        assign_public_ip: yes
        wait: yes
        wait_timeout: 180
+      register: ec2
   
 - name: Terminate instances
   hosts: localhost
