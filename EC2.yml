@@ -11,7 +11,7 @@
        wait: yes
        region: ap-south-1
        group: vjadmin_sg
-       count: 2
+       count: 1
        vpc_subnet_id: subnet-3f83aa57
        assign_public_ip: yes
        wait: yes
